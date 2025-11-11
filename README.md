@@ -1,7 +1,7 @@
 # WagoGSDMLTextlengthLimiter
 Wago GSD file reducer for S7-1200 memory compatibility
-
-The node.js script "ProcessGSDML.js" will reduce the info and diag texts to 20 characters from the primary language (englich) and delete other language (german)
+Motivation: The original Wago GSD file is too big for S7-1200 PLCs; After analysis of the huge GSD, we see that the diag messages are very long
+Goal: The node.js script "ProcessGSDML.js" will reduce the info and diag texts to 20 characters from the primary language (englich) and delete other language (german)
 
 1) Install node.js (tested with v20)
 2) Install xml2js with npm
@@ -13,3 +13,5 @@ The node.js script "ProcessGSDML.js" will reduce the info and diag texts to 20 c
 8) Run a command in the folder ProcessGSD:  "node ./ProcessGSDML.js"
 9) Copy the generated .xml file from "ProcessGSD/output" and replace the original one in folder WagoGSD
 10) Import the GSD in TIA Portal (tested with V16)
+
+Tested successfully with S7-1214C and Wago 750-375
